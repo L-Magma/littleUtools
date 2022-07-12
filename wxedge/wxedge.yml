@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  wxedge1:
+    privileged: true
+    image: onething1/wxedge
+    container_name: wxedge1
+    volumes:
+      - ./data/wxedge1:/storage
+      - ./run/wxedge1:/run
+      - ./tmp/wxedge1:/tmp
+    ports:
+      - 18889:18888
+    restart: always
+
+  wxedge2:
+    privileged: true
+    image: onething1/wxedge
+    container_name: wxedge2
+    volumes:
+      - ./data/wxedge2:/storage
+      - ./run/wxedge2:/run
+      - ./tmp/wxedge2:/tmp
+    ports:
+      - 18888:18888
+    restart: always
+
+  wxedge3:
+    privileged: true
+    image: onething1/wxedge
+    container_name: wxedge3
+    volumes:
+      - ./data/wxedge3:/storage
+      - ./run/wxedge3:/run
+      - ./tmp/wxedge3:/tmp
+    ports:
+      - 18887:18888
+    restart: always
